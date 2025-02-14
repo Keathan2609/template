@@ -1,0 +1,272 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d1e0; /* Light gray background */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Loading Counter */
+.loading-counter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #3b2a5217; /* Soft purple */
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;  /* Space between logo and nav links */
+    align-items: center;  /* Vertically center the items */
+    position: right;
+}
+
+.navbar .logo h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;  /* Make the nav links horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Nav Links */
+.navbar .nav-links a:hover {
+    color: #d0d1e0; /* Light gray hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #cea1e1, #807fad); /* Default gradient */
+    color: #fff;
+    text-align: center;
+    padding: 400px 0;  /* Changed padding to 400px */
+    transition: background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+/* General Section Styling */
+.section {
+    padding: 60px 0;
+}
+
+/* Section Box */
+.section-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#about .section-box,
+#services .section-box,
+#portfolio .section-box {
+    text-align: center;
+}
+
+/* About Section */
+#about .section-box p {
+    font-size: 18px;
+}
+
+/* Services Section */
+#services .section-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#services .section-box li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f9;
+}
+
+#contact .container {
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Contact Form Styles */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: #807fad;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#contact-form button:hover {
+    background-color: #b7a0be;
+}
+
+/* Footer Section */
+footer {
+    background-color: #807fad;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    display: none;
+    background-color: #807fad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#scroll-to-top:hover {
+    background-color: #b7a0be;
+}
+
+/* Media Queries for Navbar Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar .nav-links {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar .nav-links {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
